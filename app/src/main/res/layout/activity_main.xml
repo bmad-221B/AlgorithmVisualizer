@@ -24,6 +24,7 @@
     </com.sherlocked.pathvisualizer.PathGrid>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -32,136 +33,149 @@
         custom:layout_constraintTop_toBottomOf="@+id/PathGrid">
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button12"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/source"
             android:onClick="BTNSourcePress"
+            android:text="@string/source"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button11"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/destination"
             android:onClick="BTNDestinationPress"
+            android:text="@string/destination"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button10"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/block"
             android:onClick="BTNBlockPress"
+            android:text="@string/block"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button9"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/one"
             android:onClick="BTNOnePress"
+            android:text="@string/one"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button8"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/two"
             android:onClick="BTNTwoPress"
+            android:text="@string/two"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button7"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/three"
             android:onClick="BTNThreePress"
+            android:text="@string/three"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button6"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/four"
             android:onClick="BTNFourPress"
+            android:text="@string/four"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button5"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/five"
             android:onClick="BTNFivePress"
+            android:text="@string/five"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button4"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/six"
             android:onClick="BTNSixPress"
+            android:text="@string/six"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button3"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/seven"
             android:onClick="BTNSevenPress"
+            android:text="@string/seven"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button2"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/eight"
             android:onClick="BTNEightPress"
+            android:text="@string/eight"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
 
         <Button
-            style="@style/Widget.AppCompat.Button.Borderless"
             android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/nine"
             android:onClick="BTNNinePress"
+            android:text="@string/nine"
             android:textColor="@color/black"
-            android:textSize="5sp"/>
+            android:textSize="18sp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/solveButton"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/solve"
+        android:textSize="18sp"
+        android:onClick="solve"
+        android:background="@drawable/solve_btn"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

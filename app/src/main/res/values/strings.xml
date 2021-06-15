@@ -13,6 +13,8 @@
     <string name="nine">9</string>
     <string name="source">S</string>
     <string name="destination">D</string>
+    <string name="solve">Solve</string>
+    <string name="clear">Clear</string>
     <string name="DFS">DFS</string>
     <string name="BFS">BFS</string>
     <string name="Dijkstra">Dijkstra</string>

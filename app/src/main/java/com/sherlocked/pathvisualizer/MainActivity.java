@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.view.View;
 import android.os.Bundle;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private Solver gameBoardSolver;
 //    boolean sourceChosen,destChosen;
     static Context context;
+    private Button solveBTN;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         gameBoardSolver = gameBoard.getSolver();
 //        sourceChosen = destChosen = false;
         context = getApplicationContext();
+        solveBTN = findViewById(R.id.solveButton);
     }
 
     public void BTNSourcePress(View view) {
@@ -82,4 +86,13 @@ public class MainActivity extends AppCompatActivity {
         gameBoardSolver.setNumberPos('9');
         gameBoard.invalidate();
     }
+
+    public void solve(View view){
+        if(solveBTN.getText().toString().equals(getString(R.string.solve))){
+            solveBTN.setText(getString(R.string.clear));
+        }else{
+            solveBTN.setText(getString(R.string.solve));
+        }
+    }
+
 }
