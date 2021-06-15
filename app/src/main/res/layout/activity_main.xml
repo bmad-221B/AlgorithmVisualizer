@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.sherlocked.pathvisualizer.PathGrid
+        android:id="@+id/PathGrid"
+        custom:boardColor="#000000"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"
+        custom:cellFillColor="#6600DDFF"
+        custom:cellsHighlightColor="#2600DDFF"
+        custom:visCellColor="#FFFF33"
+        custom:blockedCellColor="#FF6347"
+        custom:letterColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </com.sherlocked.pathvisualizer.PathGrid>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        custom:layout_constraintEnd_toEndOf="parent"
+        custom:layout_constraintStart_toStartOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/PathGrid">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/source"
+            android:onClick="BTNSourcePress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/destination"
+            android:onClick="BTNDestinationPress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/block"
+            android:onClick="BTNBlockPress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/one"
+            android:onClick="BTNOnePress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/two"
+            android:onClick="BTNTwoPress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/three"
+            android:onClick="BTNThreePress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/four"
+            android:onClick="BTNFourPress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/five"
+            android:onClick="BTNFivePress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/six"
+            android:onClick="BTNSixPress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/seven"
+            android:onClick="BTNSevenPress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/eight"
+            android:onClick="BTNEightPress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/nine"
+            android:onClick="BTNNinePress"
+            android:textColor="@color/black"
+            android:textSize="5sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
