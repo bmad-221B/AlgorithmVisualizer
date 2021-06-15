@@ -15,7 +15,7 @@
         custom:layout_constraintTop_toTopOf="parent"
         custom:cellFillColor="#6600DDFF"
         custom:cellsHighlightColor="#2600DDFF"
-        custom:visCellColor="#FFFF33"
+        custom:visCellColor="#00FFFF"
         custom:blockedCellColor="#FF6347"
         custom:letterColor="@color/black"
         android:layout_width="wrap_content"

@@ -15,8 +15,8 @@
     <string name="destination">D</string>
     <string name="solve">Solve</string>
     <string name="clear">Clear</string>
-    <string name="DFS">DFS</string>
-    <string name="BFS">BFS</string>
-    <string name="Dijkstra">Dijkstra</string>
-    <string name="BellmanFord">BellmanFord</string>
+    <string name="dfs">DFS</string>
+    <string name="bfs">BFS</string>
+    <string name="djikstra">Djikstra</string>
+    <string name="bellmanFord">BellmanFord</string>
 </resources>

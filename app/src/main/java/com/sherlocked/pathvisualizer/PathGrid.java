@@ -92,7 +92,7 @@ public class PathGrid extends View {
         letterPaint.setAntiAlias(true);
         letterPaint.setColor(letterColor);
 
-        colorCell(canvas,solver.getSelectedRow(),solver.getSelectedColumn());
+        colorCell(canvas,solver.getSelectedRow(),solver.getSelectedColumn(),0);
         canvas.drawRect(0,0,getWidth(),getHeight(),boardColorPaint);
         drawBoard(canvas);
         drawNumbers(canvas);
@@ -123,6 +123,9 @@ public class PathGrid extends View {
         letterPaint.setTextSize(cellSize);
         for(int r =0 ; r<n ; r++) {
             for(int c = 0 ; c<n ; c++) {
+                if(solver.getVisBoard()[r][c]>0){
+                    colorCell(canvas,r+1,c+1,1);
+                }
                 if(solver.getBoard()[r][c]!=' ') {
                     String text = Character.toString(solver.getBoard()[r][c]);
                     float height,width;
@@ -142,6 +145,7 @@ public class PathGrid extends View {
         for(ArrayList<Object> letter : solver.getEmptyBoxIndex()){
             int r = (int)letter.get(0);
             int c = (int)letter.get(1);
+
             String text = Character.toString(solver.getBoard()[r][c]);
             float height,width;
 
@@ -151,17 +155,23 @@ public class PathGrid extends View {
 
             canvas.drawText(text,(c*cellSize) + (cellSize-width)/2,(r*cellSize+cellSize)-(cellSize-height)/2,
                     letterPaint);
+
         }
     }
 
-    private void colorCell(Canvas canvas, int r , int c) {
+    private void colorCell(Canvas canvas, int r , int c , int d) {
         if(solver.getSelectedRow()!=-1 && solver.getSelectedColumn()!=-1) {
-            canvas.drawRect((c-1)*cellSize,0,c*cellSize,cellSize*n,
-                    cellsHighlightColorPaint);
-            canvas.drawRect(0,(r-1)*cellSize,n*cellSize,r*cellSize,
-                    cellsHighlightColorPaint);
-            canvas.drawRect((c-1)*cellSize,(r-1)*cellSize,c*cellSize,r*cellSize,
-                    cellsHighlightColorPaint);
+            if(d==0){
+                canvas.drawRect((c-1)*cellSize,0,c*cellSize,cellSize*n,
+                        cellsHighlightColorPaint);
+                canvas.drawRect(0,(r-1)*cellSize,n*cellSize,r*cellSize,
+                        cellsHighlightColorPaint);
+                canvas.drawRect((c-1)*cellSize,(r-1)*cellSize,c*cellSize,r*cellSize,
+                        cellsHighlightColorPaint);
+            }else{
+                canvas.drawRect((c-1)*cellSize,(r-1)*cellSize,c*cellSize,r*cellSize,
+                        visCellColorPaint);
+            }
         }
         invalidate();
     }
