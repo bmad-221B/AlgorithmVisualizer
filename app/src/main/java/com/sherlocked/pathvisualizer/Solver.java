@@ -1,5 +1,6 @@
 package com.sherlocked.pathvisualizer;
 
+import android.os.Handler;
 import android.util.Log;
 import android.util.Pair;
 import android.widget.Toast;
@@ -24,6 +25,8 @@ public class Solver {
     int selected_row;
     int selected_column;
     boolean sourceChosen,destChosen;
+    Handler handler;
+    PathGrid tmp;
 
     Solver(){
         selected_row = -1;
@@ -50,7 +53,9 @@ public class Solver {
         dx[0] = dy[2] = -1;
         dx[1] = dy[3] = 1;
         dx[2] = dx[3] = dy[0] = dy[1] = 0;
-
+        
+        handler = new Handler();
+        
         sourceChosen = destChosen = false;
         emptyBoxIndex = new ArrayList<>();
     }
@@ -66,13 +71,23 @@ public class Solver {
             }
         }
     }
-
+    public void delayFunc(PathGrid dsp){
+        tmp = dsp;
+        handler.postDelayed(mToastRunnable,50000);
+    }
+    private Runnable mToastRunnable = new Runnable(){
+      @Override
+      public void run(){
+          Log.d("RSSB-D","DelayMsg");
+          tmp.invalidate();//display refreshes
+      }
+    };
     public int dfs(int i , int j , PathGrid dsp) {
         if(i==dest[0] && j==dest[1]) {
             return(1);
         }
         vis[i][j] = 1;
-        dsp.invalidate();//display refreshes
+        delayFunc(dsp);
         int ans = 0;
         for(int p = 0 ; p<4 ; p++){
             int x = i + dx[p];
@@ -86,7 +101,7 @@ public class Solver {
             }
         }
         vis[i][j] = 0;
-        dsp.invalidate();//display refreshes
+        delayFunc(dsp);
         return(0);
     }
 
@@ -148,7 +163,7 @@ public class Solver {
             r = c = -1;
             for(int x = 0 ; x<n ; x++) {
                 for(int y = 0 ; y<n ; y++) {
-                    if(vis[x][y]==1 && dp[x][y]<ans) {
+                    if(vis[x][y]==0 && dp[x][y]<ans) {
                         ans = dp[x][y];
                         r = x;
                         c = y;
@@ -158,7 +173,7 @@ public class Solver {
             if((r==-1 && c==-1) || (r==dest[0] && c==dest[1])) {
                 break;
             }
-            vis[r][c] = 2;
+            vis[r][c] = 1;
             dsp.invalidate();//display refreshes
             if(this.board[r][c]>='0' && this.board[r][c]<='9'){
                 ans+=(this.board[r][c]-'0');
@@ -166,11 +181,10 @@ public class Solver {
             for(int p1 = 0 ; p1<4 ; p1++) {
                 int x = r + dx[p1];
                 int y = c + dy[p1];
-                if(x<0 || y<0 || x>=n || y>=n || this.board[x][y]=='X' || dp[x][y]<=ans) {
+                if(x<0 || y<0 || x>=n || y>=n || this.board[x][y]=='X' || dp[x][y]<=ans+1) {
                     continue;
                 }
-                vis[x][y] = 1;
-                dp[x][y] = ans;
+                dp[x][y] = ans+1;
             }
 
         }
@@ -211,6 +225,7 @@ public class Solver {
             }
         }
         sourceChosen = destChosen = false;
+        handler = new Handler();
         this.emptyBoxIndex = new ArrayList<>();
     }
 

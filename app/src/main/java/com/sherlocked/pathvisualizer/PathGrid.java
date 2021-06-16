@@ -184,7 +184,7 @@ public class PathGrid extends View {
 
     private void drawThinLine(){
         boardColorPaint.setStyle(Paint.Style.STROKE);
-        boardColorPaint.setStrokeWidth(5);
+        boardColorPaint.setStrokeWidth(8);
         boardColorPaint.setColor(boardColor);
     }
 
